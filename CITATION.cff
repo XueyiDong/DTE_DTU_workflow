@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this workflow, please cite it as below."
+title: "Differential transcript expression and differential transcript usage using Salmon and edgeR"
+abstract: "A workflow implementation for analyzing differential transcript expression (DTE) and differential transcript usage (DTU) using Salmon and edgeR."
+type: software
+authors:
+  - family-names: Dong
+    given-names: Xueyi
+    orcid: "https://orcid.org/0000-0003-1136-3117"
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia"
+  - family-names: Chen
+    given-names: Lizhong
+    orcid: "https://orcid.org/0000-0002-8326-6781"
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia"
+  - family-names: Nie
+    given-names: Junli
+    orcid: "https://orcid.org/0009-0007-6725-7918"
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia"
+  - family-names: Smyth
+    given-names: Gordon K.
+    orcid: "https://orcid.org/0000-0001-9221-2892"
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia"
+  - family-names: Chen
+    given-names: Yunshun
+    email: yuchen@wehi.edu.au
+    orcid: "https://orcid.org/0000-0003-4911-5653"
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia"
+repository-code: "https://github.com/ChenLaboratory/DTE_DTU_workflow"
+doi: "10.5281/zenodo.21332966"
+version: v1.0.0
+date-released: 2026-07-13
+license: GPL-3.0-only
