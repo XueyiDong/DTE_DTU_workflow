@@ -45,8 +45,8 @@ write.table(AnnotatedTPMProp, file = "results/transcript_proportions.tsv")
 # Results visualization
 # make heatmaps to visualize the transcript usage
 library(pheatmap)
-annotation_col = data.frame(group = y$samples$group)
-ann_colors = list(group = c(H1975 = "red", HCC827 = "blue"))
+annotation_col = data.frame(Group = y$samples$group)
+ann_colors = list(Group = c(H1975 = "red", HCC827 = "blue"))
 rownames(annotation_col) <- colnames(y)
 # Figure 4b
 # pdf("results/figure/DTU_heatmap_scaled_TPM.pdf", height = 4, width = 5)
@@ -79,9 +79,13 @@ library(ggplot2)
 ggplot(dat, aes(x = sample, y = proportion, fill = transcript)) +
   geom_bar(stat = "identity") +
   facet_grid(cols = vars(group), scales = "free") +
-  labs(y = "transcript usage proportion", title = "ZNF880 transcript usage")+
-  theme_bw() +
-  theme(axis.text.x = element_text(angle = 30, hjust = 1)) +
+  labs(x = "Sample", y = "Transcript usage proportion", fill = "Transcript",
+       title = "ZNF880 transcript usage")+
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1),
+        strip.background = element_blank(),
+        strip.text = element_text(face = "bold"),
+        plot.title = element_text(hjust = 0.5, face = "bold")) +
   scale_fill_manual(values = transcript_colors)
 # dev.off()
 

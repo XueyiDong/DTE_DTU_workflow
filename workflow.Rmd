@@ -1,5 +1,5 @@
 ---
-title: "Differential transcript expression and differential transcript usage using Salmon and edgeR v4"
+title: "Differential transcript expression and differential transcript usage using Salmon and edgeR"
 author: "Xueyi Dong"
 date: "`r Sys.Date()`"
 output:

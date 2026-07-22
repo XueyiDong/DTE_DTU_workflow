@@ -35,5 +35,5 @@ col <- c("red", "blue")
 # Figure 3a
 # pdf("results/figure/MDS.pdf", height = 6, width = 6)
 plotMDS(y, col = col[as.numeric(y$samples$group)], pch = 16)
-legend("topleft", levels(y$samples$group), text.col = col)
+legend("topleft", levels(y$samples$group), pch = 16, col = col)
 # dev.off()
