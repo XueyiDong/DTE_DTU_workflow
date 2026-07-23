@@ -67,9 +67,8 @@ dat <- reshape(dat, varying = list(names(dat)[-ncol(dat)]),
 # add sample information
 dat$group <- y$samples$group[match(dat$sample, rownames(y$samples))]
 # add transcript information
-library(RColorBrewer)
-transcript_colors <- brewer.pal(
-  sum(transcript_annotation$gene_id == "CHM13_G0029458"), "Set2")
+transcript_colors <- c("#56B4E9", "#009E73", "#F0E442", 
+                       "#0072B2", "#D55E00", "#CC79A7")
 names(transcript_colors) <- transcript_annotation$transcript_id[
   transcript_annotation$gene_id == "CHM13_G0029458"]
 # make stacked proportional bar plot to visualize the transcript usage

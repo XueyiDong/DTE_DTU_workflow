@@ -18,7 +18,7 @@ tt <- topTags(res, n = Inf)
 write.table(tt, file = "results/DTE_results.tsv", sep = "\t")
 
 # Figure 4a
-# pdf("results/figure/MD.pdf", height = 5, width = 4)
+# pdf("results/figure/MD.pdf", height = 4, width = 5)
 plotMD(res, main = "HCC827 vs H1975", cex = 0.3)
 # dev.off()
 
@@ -32,7 +32,7 @@ tt$table$DE_status <- ifelse(tt$table$FDR > fdr_cutoff, "NotSig",
 # Create a column for highlighting top 2 DE transcripts
 tt$table$top2 <- ""
 tt$table$top2[1:2] <- tt$table$transcript_id[1:2]
-# pdf("results/figure/volcano.pdf", height = 5, width = 4)
+# pdf("results/figure/volcano.pdf", height = 4, width = 5)
 ggplot(tt$table, aes(x = logFC, y = -log10(FDR),  label = top2)) +
   geom_point(aes(colour = DE_status), size = 0.3) +
   geom_text(hjust = -0.05) +
